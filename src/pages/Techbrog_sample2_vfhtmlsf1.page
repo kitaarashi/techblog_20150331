@@ -1,0 +1,36 @@
+<apex:page standardController="Account" standardStylesheets="false" 
+ applyBodyTag="false" applyHtmlTag="false" showHeader="false" sidebar="false">
+ 	<script src="http://sfdc-styleguide.herokuapp.com/styles.css"/> 	   	
+	<body class="container theme-showcase">
+	<br/>
+    <apex:form>
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+	        	<h3 class="panel-title">取引先詳細</h3>
+	        </div>
+    	    <div class="panel-body">
+        	  	<div id="theForm">
+        	  		<table>
+        	  			<tbody>
+        	  				<tr>
+        	  					<td>種類 </td>
+        	  					<td><apex:inputField id="address_" value="{!account.Type}" styleClass="" /></td>
+        	  				</tr>
+        	  			</tbody>		
+        	  		</table>
+        			<span class="component-subtype">種類 </span>&nbsp;
+        			<apex:inputField id="address" value="{!account.Type}" 
+        			 styleClass="mbm size-full pbm pvm input input-default input--ph-1 input--focus-1" /><br/>
+        			<apex:outputLabel for="phone" value="電話番号" />&nbsp;
+        			<apex:inputField id="phone" value="{!account.Phone}" /><br/>
+        			<apex:outputLabel for="website" value="Webサイト" />&nbsp;
+        			<apex:inputField id="website" value="{!account.Website}" />
+          		</div>
+        	</div>
+        </div>
+        <div>
+        	<apex:commandButton styleClass="btn btn-primary" action="{!quickSave}" value="Save" />
+        </div>
+    </apex:form>
+    </body>
+</apex:page>

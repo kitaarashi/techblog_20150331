@@ -1,0 +1,110 @@
+<apex:page standardController="Account" extensions="AccountEditor"
+    showHeader="false" standardStylesheets="false"
+    docType="html-5.0" applyHtmlTag="false" applyBodyTag="false">
+    <!-- Include Mobile Toolkit styles and JavaScript -->
+    <apex:stylesheet
+     value="{!URLFOR($Resource.Mobile_Design_Templates, 'common/css/app.min.css')}"/>
+    <apex:includeScript
+     value="{!URLFOR($Resource.Mobile_Design_Templates, 'common/js/jQuery2.0.2.min.js')}"/>
+    <apex:includeScript
+     value="{!URLFOR($Resource.Mobile_Design_Templates, 'common/js/jquery.touchwipe.min.js')}"/>
+    <apex:includeScript
+      value="{!URLFOR($Resource.Mobile_Design_Templates, 'common/js/main.min.js')}"/>
+<head>
+<style>
+    html, body, p { font-family: sans-serif; }
+    input { display: block; }
+</style>
+<script>
+    $(document).ready(function(){
+        // Load the record
+        loadAccount();
+    });
+    // Utility; parse out parameter by name from URL query string
+    $.urlParam = function(name){
+        var results = new RegExp('[\\?&]' + name + '=([^&#]*)')
+            .exec(window.location.href);
+        return results[1] || 0;
+    }
+    function loadAcount() {
+        // Get the record Id from the GET query string
+        name = $.urlParam('name');
+￼￼￼    // Call the remote action to retrieve the record data
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.AccountEditor.getAccount}',
+             name,
+             function(result, event){;
+                if(event.status){
+                    console.log('account name is name' + name);
+                    $('#name').text(result.Name);
+                    $('#type').val(result.type);
+                    $('#website').val(result.website);
+                    $('#phone').val(result.phone);
+                } else if (event.type === 'exception'){
+                    console.log(result);
+                } else {
+                // unexpected problem...
+                } 
+            });
+    }
+    function updateAccount() {
+        // Get the record Id from the GET query string
+        name = $.urlParam('name');
+        // Call the remote action to save the record data
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.AccountEditor.setAccount}',
+            name, $('#type').val(),
+                $('#website').val(),
+                $('#phone').val(),
+            function(result, event){;
+            }
+        );
+        if(event.status){
+            console.log(name);
+            $('#action_status').text('Record updated.');
+        } else if (event.type === 'exception'){
+            console.log(result);
+            $('#action_status').text(
+
+              'Problem saving record.');
+        } else {
+        // unexpected problem...
+        }
+￼￼  } 
+</script>
+</head>
+<body>
+<div id="detailPage">
+    <div class="list-view-header" id="name"></div>
+    <div id="action_status"></div>
+    <section>
+        <div class="content">
+            <h3>取引先の詳細</h3>
+            <div class="form-control-group">
+                <div class="form-control form-control-text">
+                    <label for="type">
+                        種類</label>
+                    <input type="text" id="type" />
+                </div>
+                <div class="form-control form-control-text">
+                    <label for="phone">電話番号</label>
+                    <input type="text" id="phone" />
+                </div>
+                <div class="form-control form-control-text">
+                    <label for="website">Webサイト</label>
+                    <input type="text" id="website" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="data-capture-buttons one-buttons">
+        <div class="content">
+            <section class="data-capture-buttons one-buttons">
+                <a href="#" id="updateAccount"
+                    onClick="updateAccount();">save</a>
+            </section>
+        </div>
+    </section>
+</div> <!-- end detail page -->
+</body>
+</apex:page>

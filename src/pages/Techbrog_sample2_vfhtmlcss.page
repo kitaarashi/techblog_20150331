@@ -1,0 +1,42 @@
+<apex:page standardController="Account" standardStylesheets="false" 
+ applyBodyTag="false" applyHtmlTag="false" showHeader="false" sidebar="false">
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/>    
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"/> 	   	
+	<body class="container theme-showcase">
+	<br/>
+    <apex:form>
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+	        	<h3 class="panel-title">取引先詳細</h3>
+	        </div>
+    	    <div class="panel-body">
+        	  	<div id="theForm">
+        	  		<table class="table table-striped">
+        	  			<tbody>
+        	  				<tr>
+        	  					<td>種類 </td>
+        	  					<td><apex:inputField id="address" value="{!account.Type}" styleClass="" /></td>
+        	  				</tr>
+        	  				<tr>
+        	  					<td>電話番号</td>
+        	  					<td><apex:inputField id="phone" value="{!account.Phone}" styleClass="" /></td>
+        	  				</tr>
+        	  				<tr>
+        	  					<td>Webサイト </td>
+        	  					<td><apex:inputField id="website" value="{!account.Website}" /></td>
+        	  				</tr>
+        	  			</tbody>		
+        	  		</table>
+          		</div>
+        	</div>
+        </div>
+        <div>
+        	<apex:commandButton styleClass="btn btn-primary" action="{!quickSave}" value="Save" />
+        </div>
+    </apex:form>
+    </body>
+</apex:page>

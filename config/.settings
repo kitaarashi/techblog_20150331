@@ -1,0 +1,19 @@
+{
+    "username": "kitaarashi+ltng@gmail.com", 
+    "project_name": "LightningDemo", 
+    "org_url": "", 
+    "namespace": "", 
+    "metadata_container": "1dc28000000LFLrAAO", 
+    "environment": "developer", 
+    "workspace": "/Users/kitaarashi/MyData/ws_salesforce", 
+    "id": "NKNDJ3N0WL5XUPHAWK6XYB9THW87ZPXF", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "CustomObject", 
+        "Profile", 
+        "StaticResource"
+    ]
+}

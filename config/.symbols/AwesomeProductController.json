@@ -1,0 +1,70 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "AwesomeProductController", 
+    "tableDeclaration": {
+        "type": "AwesomeProductController", 
+        "modifiers": [], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "AwesomeProductController"
+    }, 
+    "key": "01p28000000P6EYAA0", 
+    "variables": [
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 9
+            }, 
+            "name": "name"
+        }
+    ], 
+    "id": "01p28000000P6EYAA0", 
+    "methods": [
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "getProducts", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 3
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "getProductByName", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "name"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 9
+            }, 
+            "returnType": "Product__c", 
+            "type": null
+        }
+    ]
+}

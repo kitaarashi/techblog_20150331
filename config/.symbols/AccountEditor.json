@@ -1,0 +1,175 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [], 
+            "name": "AccountEditor", 
+            "parameters": [
+                {
+                    "type": "StandardController", 
+                    "name": "ctl"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 4
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "AccountEditor", 
+    "tableDeclaration": {
+        "type": "AccountEditor", 
+        "modifiers": [], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 1
+        }, 
+        "name": "AccountEditor"
+    }, 
+    "key": "01p28000000x0t5AAA", 
+    "variables": [
+        {
+            "type": "StandardController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 4
+            }, 
+            "name": "ctl"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 6
+            }, 
+            "name": "name"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 9
+            }, 
+            "name": "res"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 18
+            }, 
+            "name": "name"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 18
+            }, 
+            "name": "type"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 18
+            }, 
+            "name": "webSite"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 18
+            }, 
+            "name": "phone"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 20
+            }, 
+            "name": "acnt"
+        }
+    ], 
+    "id": "01p28000000x0t5AAA", 
+    "methods": [
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "getAccount", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "name"
+                }
+            ], 
+            "visibility": "GLOBAL", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 6
+            }, 
+            "returnType": "Account", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "setAccount", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "name"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "type"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "webSite"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "phone"
+                }
+            ], 
+            "visibility": "GLOBAL", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 17
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }
+    ]
+}
